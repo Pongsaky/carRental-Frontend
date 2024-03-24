@@ -6,7 +6,7 @@ export const dbConnect = async () => {
     mongoose.set("strictQuery", true)
     if (isConnected) return
 
-    const MONGO_URI = process.env.MONGO_URI
+    const MONGO_URI = process.env.MONGODB_URI
     if (!MONGO_URI) throw new Error("Please define MONGO_URI")
 
     try {
